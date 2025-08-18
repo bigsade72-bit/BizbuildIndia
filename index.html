@@ -565,20 +565,22 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
 
   .upgrade-cta {
     font-family: 'Segoe UI', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.8em;       /* Made upgrade text bigger */
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .upgrade-cta .arrow::before {
-    content: '←';
-    margin-left: 8px;
-    font-size: 1.2em;
+    content: '→';           /* Right arrow on desktop */
+    margin-left: 10px;
+    font-size: 1.3em;       /* Made arrow bigger */
   }
+
   @media (max-width: 767px) {
     .upgrade-cta .arrow::before {
-      content: '↓';
+      content: '↓';         /* Down arrow on mobile */
     }
   }
 
@@ -589,23 +591,38 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
     margin: 0;
     text-align: left;
   }
+
   .details-content li {
     position: relative;
     margin-bottom: 0.5em;
     padding-left: 1.5em;
   }
+
   .details-content li::before {
     content: '✓';
     position: absolute;
     left: 0;
     color: #ff4444;
   }
+
   .details-content ul ul {
     padding-left: 20px;
     margin-top: 4px;
   }
+
   .details-content ul ul li::before {
-    content: none;
+    content: none;          /* No checkmarks on nested items */
+  }
+
+  /* Style section titles red, nested items white */
+  .details-content > ul > li {
+    color: #ff4444;
+    font-weight: bold;
+  }
+
+  .details-content > ul > li ul li {
+    color: #fff;
+    font-weight: normal;
   }
 </style>
 
@@ -621,6 +638,7 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
     padding: 20px;
     font-family: 'Segoe UI', sans-serif;
   ">
+    <!-- ...Same as before, with Pinterest Ads added -->
     <img src="https://i.postimg.cc/dV5x7Z0J/Scale.jpg"
          alt="Complete Facebook Marketing Course"
          style="width:100%; border-radius:8px; border:2px solid #aa0000;">
@@ -839,43 +857,7 @@ src="https://www.facebook.com/tr?id=1089039574891097&ev=PageView&noscript=1"
   padding: 20px;
   background: #000;
 ">
-
-  <!-- 🔴 Complete Facebook Marketing Course -->
-  <div class="product-card" style="
-    flex: 1 1 300px;
-    max-width: 400px;
-    border: 1px solid #aa0000;
-    background: #000;
-    color: #fff;
-    padding: 20px;
-  ">
-    <img src="https://i.postimg.cc/gjZd5p9c/FACEBOOK-ADS-1.png"
-         alt="Complete Facebook Marketing Course"
-         style="width:100%; border-radius:8px; border:2px solid #aa0000;">
-    <h2 style="margin:15px 0 5px;">Complete Facebook Marketing Course</h2>
-    <div style="margin-top:15px;">
-      <div onclick="toggleDetails(this)"
-           style="cursor:pointer; color:#ff4444; font-weight:bold;">
-        Details ▼
-      </div>
-      <div class="details-content" style="
-        display:none;
-        margin-top:10px;
-        background:#111;
-        padding:10px;
-        border-radius:4px;
-        border:1px solid #aa0000;
-      ">
-        <p>
-          ✓ All 19 chapters<br>
-          ✓ 7-figure copy-paste ads template<br>
-          ✓ Content Creation<br>
-          ✓ How to launch in 7 days
-        </p>
-      </div>
-    </div>
-  </div>
-
+  
   <!-- ⭐ Scale With YouTube Ads -->
   <div class="product-card" style="
     flex: 1 1 300px;
